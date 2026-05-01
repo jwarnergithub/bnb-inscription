@@ -1,12 +1,12 @@
-# Fully On-Chain Image NFT
+# Fully On-Chain Image NFT For BSC
 
-This is a Hardhat project for deploying an ERC-721-compatible NFT collection on BNB Smart Chain where each token's metadata and JPG image data are stored entirely on-chain.
+This is a Hardhat project for deploying an ERC-721-compatible NFT collection on BNB Smart Chain, also commonly called BSC. Each token's metadata and JPG image data are stored entirely on-chain.
 
 The contract does not use IPFS, Arweave, BNB Greenfield, a web server, or an external metadata gateway. Each token's `tokenURI` returns a `data:application/json;base64,...` URI. The JSON metadata contains an `image` field that is also a data URI: `data:image/jpeg;base64,...`.
 
 ## What This Does
 
-- Deploys an ERC-721 NFT contract named `On-Chain Image NFT` with symbol `OCIMG`.
+- Deploys an ERC-721 NFT contract named `On-Chain Image NFT` with symbol `OCIMG` to BNB Smart Chain / BSC.
 - Mints an NFT to the deployer wallet.
 - Reads a local JPG file, converts it to base64, and splits it into chunks.
 - Uploads those chunks into contract storage over multiple transactions.
@@ -15,6 +15,8 @@ The contract does not use IPFS, Arweave, BNB Greenfield, a web server, or an ext
 - Supports adding more tokens/images to the same collection later.
 
 ## Important Notes
+
+This project is intended for BNB Smart Chain / BSC testnet and mainnet. It may work on other EVM-compatible chains, but the included network configuration and commands target BSC.
 
 Fully on-chain JPG storage is more expensive than a normal NFT because the image bytes are stored in EVM contract storage. Small, compressed JPGs are strongly recommended.
 
@@ -58,7 +60,7 @@ Compile:
 npm run compile
 ```
 
-## Deploy To BNB Testnet
+## Deploy To BSC Testnet
 
 Check the deployer balance:
 
@@ -84,7 +86,7 @@ Verify the on-chain metadata and image:
 npm run verify:token
 ```
 
-## Deploy To BNB Mainnet
+## Deploy To BSC Mainnet
 
 Before running this, fund the deployer wallet with real BNB on BNB Smart Chain mainnet.
 

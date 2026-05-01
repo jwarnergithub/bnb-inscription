@@ -1,6 +1,7 @@
 {
   "name": "bnb-inscription",
   "version": "1.0.0",
+  "description": "Fully on-chain JPG NFT project for BNB Smart Chain / BSC.",
   "private": true,
   "scripts": {
     "compile": "HOME=$PWD/.hardhat-home hardhat compile",

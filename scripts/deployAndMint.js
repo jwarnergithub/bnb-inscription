@@ -40,7 +40,7 @@ async function main() {
   const tokenName = optionalEnv("TOKEN_NAME", "On-Chain Image #1");
   const tokenDescription = optionalEnv(
     "TOKEN_DESCRIPTION",
-    "A JPG image and NFT metadata stored entirely on BNB Smart Chain."
+    "A JPG image and NFT metadata stored entirely on BNB Smart Chain / BSC."
   );
   const imagePath = path.join(__dirname, "..", imageFile);
 
