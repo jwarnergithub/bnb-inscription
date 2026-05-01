@@ -1,0 +1,24 @@
+{
+  "name": "bnb-inscription",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "HOME=$PWD/.hardhat-home hardhat compile",
+    "check:testnet": "HOME=$PWD/.hardhat-home hardhat run scripts/checkWallet.js --network bscTestnet",
+    "deploy:testnet": "HOME=$PWD/.hardhat-home hardhat run scripts/deployAndMint.js --network bscTestnet",
+    "mint:testnet": "HOME=$PWD/.hardhat-home hardhat run scripts/mintToken.js --network bscTestnet",
+    "verify:token": "HOME=$PWD/.hardhat-home hardhat run scripts/verifyTokenURI.js --network bscTestnet",
+    "check:mainnet": "HOME=$PWD/.hardhat-home hardhat run scripts/checkWallet.js --network bsc",
+    "deploy:mainnet": "HOME=$PWD/.hardhat-home hardhat run scripts/deployAndMint.js --network bsc",
+    "mint:mainnet": "HOME=$PWD/.hardhat-home hardhat run scripts/mintToken.js --network bsc",
+    "verify:mainnet": "HOME=$PWD/.hardhat-home hardhat run scripts/verifyTokenURI.js --network bsc"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.6"
+  }
+}
