@@ -30,7 +30,7 @@ async function main() {
   }
 
   const [deployer] = await hre.ethers.getSigners();
-  const nft = await hre.ethers.getContractAt("OnChainRedRidingHood", contractAddress);
+  const nft = await hre.ethers.getContractAt("OnChainImageNFT", contractAddress);
   const owner = await nft.owner();
 
   if (owner.toLowerCase() !== deployer.address.toLowerCase()) {

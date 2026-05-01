@@ -29,7 +29,7 @@ async function main() {
   const tokenId = Number(optionalEnv("TOKEN_ID", "1"));
   const imageFile = optionalEnv("IMAGE_FILE", "your-image.jpg");
   const imagePath = path.join(__dirname, "..", imageFile);
-  const nft = await hre.ethers.getContractAt("OnChainRedRidingHood", contractAddress);
+  const nft = await hre.ethers.getContractAt("OnChainImageNFT", contractAddress);
 
   if (!Number.isSafeInteger(tokenId) || tokenId < 1) {
     throw new Error("TOKEN_ID must be a positive integer");

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract OnChainRedRidingHood is ERC721, Ownable {
+contract OnChainImageNFT is ERC721, Ownable {
     using Strings for uint256;
 
     struct TokenData {
@@ -22,7 +22,7 @@ contract OnChainRedRidingHood is ERC721, Ownable {
     event TokenFrozen(uint256 indexed tokenId);
 
     constructor(address initialOwner)
-        ERC721("On-Chain Red Riding Hood", "REDHOOD")
+        ERC721("On-Chain Image NFT", "OCIMG")
     {
         if (initialOwner != _msgSender()) {
             transferOwnership(initialOwner);

@@ -37,7 +37,7 @@ async function main() {
 
   const tokenId = Number(optionalEnv("TOKEN_ID", "1"));
   const imageFile = optionalEnv("IMAGE_FILE", "your-image.jpg");
-  const tokenName = optionalEnv("TOKEN_NAME", "Red Riding Hood");
+  const tokenName = optionalEnv("TOKEN_NAME", "On-Chain Image #1");
   const tokenDescription = optionalEnv(
     "TOKEN_DESCRIPTION",
     "A JPG image and NFT metadata stored entirely on BNB Smart Chain."
@@ -63,7 +63,7 @@ async function main() {
   console.log("Image base64 length:", imageBase64.length);
   console.log("Chunk count:", chunks.length);
 
-  const Factory = await hre.ethers.getContractFactory("OnChainRedRidingHood");
+  const Factory = await hre.ethers.getContractFactory("OnChainImageNFT");
   const nft = await Factory.deploy(deployer.address);
   await nft.waitForDeployment();
 
